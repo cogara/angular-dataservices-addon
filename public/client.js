@@ -123,7 +123,6 @@ angular.module('olympianApp').controller('MainController', function($scope, Data
   //loading data
 })
 
-
 angular.module('olympianApp').controller('SynchronizedSwimmingController', function($scope, DataService){
   $scope.data = DataService.data.synchronizedSwimming;
   });
