@@ -1,4 +1,5 @@
 var router = require('express').Router();
+var path = require('path');
 
 var synchronizedSwimming = [
   {sport: 'Synchroized Swimming', name: 'Anita Alvarez', hometown: 'Kenmore, NY'},
@@ -74,6 +75,11 @@ function randomOlympian(array, length) {
 // var randomBadminton = randomOlympian(badminton, 7);
 // var randomWrestling = randomOlympian(wrestling, 14);
 // var randomGymnastics = randomOlympian(gymnastics, 18);
+
+// /synchronizedSwimming
+router.get('/', function(request, response) {
+  response.sendFile(path.join(__dirname, '../public/views/index.html'));
+})
 
 router.get('/synchronizedSwimming', function(request, response){
   var randomSynchronizedSwimming = randomOlympian(synchronizedSwimming, 2);
